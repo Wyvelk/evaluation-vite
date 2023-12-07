@@ -55,9 +55,9 @@
     <div class="flex justify-center pb-12"><a href="#contact" class="bg-red-500 text-white font-bold p-6 text-2xl hover:bg-red-400 transition ease-in-out" > Contactez-moi !</a></div>
 </section>
 
-<section id="a-propos" class="sm:mx-12  mt-8">
-    <div class="text-red-500 font-extrabold text-4xl">A Propos :</div>
-    <div class="bg-blue-950 sm:rounded-2xl p-4 sm:mx-2 mt-4 w-full text-white">
+<section id="a-propos" class="lg:mx-96  mt-8 ">
+    <div class="text-red-500 font-extrabold text-4xl text-center">A Propos :</div>
+    <div class="bg-blue-950 lg:rounded-2xl p-4 mt-4  text-white">
 
         Étudiant Lillois en 3e année de BUT MMI à l'IUT de Lens, je cherche à me spécialiser en Développement Web front end et Web design, une précédente formation dans le domaine de l'animation et du jeu vidéo m'ont également permis d'acquérir une sensibilité et des compétences esthétique riche, qui peuvent également s'exprimer dans mon domaine actuel, et un stage de 3 mois réalisé au japon m'ont permit d'acquérir indépendance, ouverture d'esprit et adaptabilité.
         Je recherche donc une alternance dès que possible pour l'année 2023/2024 dans le domaine du web afin de compéter ma formation, d'acquérir de nouvelles compétences ainsi que d'enrichir mes connaissances.
@@ -65,7 +65,7 @@
 
     </div>
     <div class="text-red-500 text-2xl font-bold"> Ce que je recherche : </div>
-    <div class="flex w-full justify-evenly my-4 ">
+    <div class="flex w-full justify-evenly my-4">
         <div x-data="{open:false}" class="bg-blue-950 rounded-2xl p-4 mx-2 w-full">
             <div x-on:click="open = ! open" class="text-red-500 text-2xl font-bold hover:text-red-400 transition ease-in-out">Quoi ?</div>
             <div x-cloak x-show="open" x-transition class="text-white"> Un stage ou une alternance me permettant de valider ma formation</div>
@@ -82,10 +82,10 @@
 </section>
 
 <section id="portfolio" class="sm:mx-12  mt-8">
-    <div class="text-red-500 font-extrabold text-4xl">Portfolio :</div>
+    <div class="text-red-500 font-extrabold text-4xl text-center">Portfolio :</div>
 
     <div x-data="Portfolio('./data.json')">
-        <div class="flex justify-around">
+        <div class="flex justify-center">
             <button
                     @click="toggleCategory('web')"
                     :class="{ 'bg-red-500 text-white': selectedCategories.includes('web'), 'bg-blue-950 text-white': !selectedCategories.includes('web') }"
@@ -108,7 +108,7 @@
                 Autre
             </button>
         </div>
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-3 gap-4 sm:w-3/5 mx-auto">
             <template x-for="image in filteredImages" x-show="selectedCategories.length === 0 || selectedCategories.includes(image.categorie)">
                 <img :src="image.img" alt="Image" class="w-full h-32  object-cover rounded-md">
             </template>
@@ -118,7 +118,7 @@
 </section>
 
 <section id="competences" class="sm:mx-12  mt-8">
-    <div class="text-red-500 font-extrabold text-4xl">Compétences :</div>
+    <div class="text-red-500 font-extrabold text-4xl text-center">Compétences :</div>
     <div x-data="Portfolio('./skills.json')" class="grid grid-cols-5 gap-4 mt-8 sm:w-3/5 mx-auto">
         <template x-for="image in images">
             <img :src="image.img" alt="Image" class=" w-full object-cover rounded-md">
@@ -127,7 +127,7 @@
 </section>
 
 <section id="contact" x-data="contactForm" class="sm:mx-12  mt-8 mb-8">
-    <div class="text-red-500 font-extrabold text-4xl">Contact : </div>
+    <div class="text-red-500 font-extrabold text-4xl text-center">Contact : </div>
     <form class=" w-3/5 m-auto bg-blue-950 text-white rounded-2xl p-4" @submit.prevent="validateForm">
         <div class="mt-4">
             <label class="block" for="name">Nom :</label>
