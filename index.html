@@ -131,17 +131,17 @@
     <form class=" sm:w-3/5 m-auto bg-blue-950 text-white sm:rounded-2xl p-4" @submit.prevent="validateForm">
         <div class="mt-4">
             <label class="block" for="name">Nom :</label>
-            <input x-model="name" type="text" id="name" name="name"  class="rounded-3xl w-full" required>
+            <input x-model="name" type="text" id="name" name="name"  class="rounded-3xl w-full text-blue-950" required>
         </div>
 
         <div class="mt-4">
             <label class="block" for="email">Email :</label>
-            <input x-model="email" type="email" id="email" name="email" class="rounded-3xl w-full" required>
+            <input x-model="email" type="email" id="email" name="email" class="rounded-3xl w-full text-blue-950" required>
         </div>
 
         <div class="mt-4">
             <label class="block" for="message">Message :</label>
-            <textarea x-model="message" id="message" name="message" rows="4" class="rounded-3xl w-full" required></textarea>
+            <textarea x-model="message" id="message" name="message" rows="4" class="rounded-3xl w-full text-blue-950" required></textarea>
         </div>
 
         <button class="bg-red-500 p-3 text-white w-fit mt-2 block mx-auto rounded hover:bg-red-400 transition ease-in-out" type="submit">Envoyer</button>
