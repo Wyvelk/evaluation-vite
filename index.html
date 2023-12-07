@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Evaluation Tailwind CSS + Alpine JS</title>
+</head>
+<body class="font-sans antialiased text-gray-900 leading-normal bg-cover">
+<div class="bg-blue-950 text-red-500 justify-between hidden sm:flex">
+    <h1 class=" py-2 px-4 no-underline text-2xl font-extrabold">Michaël Balois</h1>
+    <div>
+        <a class="inline-block py-2 px-4 no-underline hover:bg-red-500 hover:text-white transition ease-in-out" href="#accueil">
+            Accueil
+        </a>
+        <a class="inline-block py-2 px-4 no-underline hover:bg-red-500 hover:text-white transition ease-in-out" href="#a-propos">
+            A propos
+        </a>
+        <a class="inline-block py-2 px-4 no-underline hover:bg-red-500 hover:text-white transition ease-in-out" href="#portfolio">
+            Portfolio
+        </a>
+        <a class="inline-block py-2 px-4 no-underline hover:bg-red-500 hover:text-white transition ease-in-out" href="#competences">
+            Compétences
+        </a>
+        <a class="inline-block py-2 px-4 no-underline hover:bg-red-500 hover:text-white transition ease-in-out" href="#contact">
+            Contact
+        </a>
+    </div>
+</div>
+<div  x-data="{open:false}" class=" bg-blue-950 text-red-500 flex-col sm:hidden">
+    <div class="flex"><h1  class=" w-fit m-auto  py-2 px-4 no-underline text-2xl font-extrabold">Michaël Balois</h1>
+        <i x-on:click="open = ! open" class='bx bx-menu text-5xl'></i></div>
+    <div  x-cloak x-show="open" x-transition class="justify-center z-10 absolute top-0 w-full h-screen bg-blue-950">
+        <div class="flex"><h1  class=" w-fit m-auto  py-2 px-4 no-underline text-2xl font-extrabold">Michaël Balois</h1>
+            <i x-on:click="open = ! open" class='bx bx-x text-5xl'></i></div>
+        <a class=" block w-fit m-auto py-2 px-4 no-underline" href="#accueil">
+            Accueil
+        </a>
+        <a class="block w-fit m-auto  py-2 px-4 no-underline" href="#a-propos" x-on:click="open = ! open">
+            A propos
+        </a>
+        <a class="block w-fit m-auto  py-2 px-4 no-underline" href="#portfolio" x-on:click="open = ! open">
+            Portfolio
+        </a>
+        <a class="block w-fit m-auto  py-2 px-4 no-underline" href="#competences" x-on:click="open = ! open">
+            Compétences
+        </a>
+        <a class="block w-fit m-auto  py-2 px-4 no-underline" href="#contact" x-on:click="open = ! open">
+            Contact
+        </a>
+    </div>
+</div>
+<section id="accueil" class="bg-blue-950 text-red-500 h-fit">
+    <div class="text-5xl sm:text-8xl font-extrabold text-center sm:text-right py-24 sm:pr-48">Web Dev /</br> Web Design</div>
+    <div class="flex justify-center pb-12"><a href="#contact" class="bg-red-500 text-white font-bold p-6 text-2xl hover:bg-red-400 transition ease-in-out" > Contactez-moi !</a></div>
+</section>
+
+<section id="a-propos" class="sm:mx-12  mt-8">
+    <div class="text-red-500 font-extrabold text-4xl">A Propos :</div>
+    <div class="bg-blue-950 sm:rounded-2xl p-4 sm:mx-2 mt-4 w-full text-white">
+
+        Étudiant Lillois en 3e année de BUT MMI à l'IUT de Lens, je cherche à me spécialiser en Développement Web front end et Web design, une précédente formation dans le domaine de l'animation et du jeu vidéo m'ont également permis d'acquérir une sensibilité et des compétences esthétique riche, qui peuvent également s'exprimer dans mon domaine actuel, et un stage de 3 mois réalisé au japon m'ont permit d'acquérir indépendance, ouverture d'esprit et adaptabilité.
+        Je recherche donc une alternance dès que possible pour l'année 2023/2024 dans le domaine du web afin de compéter ma formation, d'acquérir de nouvelles compétences ainsi que d'enrichir mes connaissances.
+        Passionné par les univers du numérique et de la création, doté d’une grande ouverture d’esprit, je suis très calme et possède un bon esprit d’équipe. Je dispose également d’un très bon niveau d’anglais, en plus de ma maitrise de plusieurs langages de programmation (PHP, HTML, CSS, JS, SQL) et je suis aussi formé sur les frameworks Laravel, vue.js, Blade, et Wordpress, et maitrise Git. De plus, je maitrise plusieurs logiciels graphique tels que la suite Adobe, Figma, Blender, 3dsMax et Maya. Si mon profil vous intéresse, n’hésitez pas à me contacter !
+
+    </div>
+    <div class="text-red-500 text-2xl font-bold"> Ce que je recherche : </div>
+    <div class="flex w-full justify-evenly my-4 ">
+        <div x-data="{open:false}" class="bg-blue-950 rounded-2xl p-4 mx-2 w-full">
+            <div x-on:click="open = ! open" class="text-red-500 text-2xl font-bold hover:text-red-400 transition ease-in-out">Quoi ?</div>
+            <div x-cloak x-show="open" x-transition class="text-white"> Un stage ou une alternance me permettant de valider ma formation</div>
+        </div>
+        <div x-data="{open:false}" class="bg-blue-950 rounded-2xl p-4 mx-2 w-full">
+            <div x-on:click="open = ! open" class="text-red-500 text-2xl font-bold  hover:text-red-400 transition ease-in-out">Ou ?</div>
+            <div x-cloak x-show="open" x-transition class="text-white">Dans la région de Lille et alentours</div>
+        </div>
+        <div x-data="{open:false}" class="bg-blue-950 rounded-2xl p-4 mx-2 w-full">
+            <div x-on:click="open = ! open" class="text-red-500 text-2xl font-bold  hover:text-red-400 transition ease-in-out">Quand ?</div>
+            <div x-cloak x-show="open" x-transition class="text-white">Dès que possible, avant Décembre</div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="sm:mx-12  mt-8">
+    <div class="text-red-500 font-extrabold text-4xl">Portfolio :</div>
+
+    <div x-data="Portfolio('./data.json')">
+        <div class="flex justify-around">
+            <button
+                    @click="toggleCategory('web')"
+                    :class="{ 'bg-red-500 text-white': selectedCategories.includes('web'), 'bg-blue-950 text-white': !selectedCategories.includes('web') }"
+                    class="p-4 m-1 rounded-md cursor-pointer"
+            >
+                Web
+            </button>
+            <button
+                    @click="toggleCategory('design')"
+                    :class="{ 'bg-red-500 text-white': selectedCategories.includes('design'), 'bg-blue-950 text-white': !selectedCategories.includes('design') }"
+                    class="p-4 m-1 rounded-md cursor-pointer"
+            >
+                Design
+            </button>
+            <button
+                    @click="toggleCategory('autre')"
+                    :class="{ 'bg-red-500 text-white': selectedCategories.includes('autre'), 'bg-blue-950 text-white': !selectedCategories.includes('autre') }"
+                    class="p-4 m-1 rounded-md cursor-pointer"
+            >
+                Autre
+            </button>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+            <template x-for="image in filteredImages" x-show="selectedCategories.length === 0 || selectedCategories.includes(image.categorie)">
+                <img :src="image.img" alt="Image" class="w-full h-32  object-cover rounded-md">
+            </template>
+        </div>
+    </div>
+
+</section>
+
+<section id="competences" class="sm:mx-12  mt-8">
+    <div class="text-red-500 font-extrabold text-4xl">Compétences :</div>
+    <div x-data="Portfolio('./skills.json')" class="grid grid-cols-5 gap-4 mt-8 sm:w-3/5 mx-auto">
+        <template x-for="image in images">
+            <img :src="image.img" alt="Image" class=" w-full object-cover rounded-md">
+        </template>
+    </div>
+</section>
+
+<section id="contact" x-data="contactForm" class="sm:mx-12  mt-8 mb-8">
+    <div class="text-red-500 font-extrabold text-4xl">Contact : </div>
+    <form class=" w-3/5 m-auto bg-blue-950 text-white rounded-2xl p-4" @submit.prevent="validateForm">
+        <div class="mt-4">
+            <label class="block" for="name">Nom :</label>
+            <input x-model="name" type="text" id="name" name="name"  class="rounded-3xl w-full" required>
+        </div>
+
+        <div class="mt-4">
+            <label class="block" for="email">Email :</label>
+            <input x-model="email" type="email" id="email" name="email" class="rounded-3xl w-full" required>
+        </div>
+
+        <div class="mt-4">
+            <label class="block" for="message">Message :</label>
+            <textarea x-model="message" id="message" name="message" rows="4" class="rounded-3xl w-full" required></textarea>
+        </div>
+
+        <button class="bg-red-500 p-3 text-white w-fit mt-2 block mx-auto rounded hover:bg-red-400 transition ease-in-out" type="submit">Envoyer</button>
+    </form>
+
+    <div x-text="errorMessages" class="text-red-500"></div>
+</section>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
