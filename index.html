@@ -128,7 +128,7 @@
 
 <section id="contact" x-data="contactForm" class="sm:mx-12  mt-8 mb-8">
     <div class="text-red-500 font-extrabold text-4xl text-center">Contact : </div>
-    <form class=" w-3/5 m-auto bg-blue-950 text-white rounded-2xl p-4" @submit.prevent="validateForm">
+    <form class=" sm:w-3/5 m-auto bg-blue-950 text-white sm:rounded-2xl p-4" @submit.prevent="validateForm">
         <div class="mt-4">
             <label class="block" for="name">Nom :</label>
             <input x-model="name" type="text" id="name" name="name"  class="rounded-3xl w-full" required>
